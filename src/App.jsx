@@ -18,11 +18,9 @@ function App() {
    * @returns {number} The age in weeks.
    */
   const calculateAgeInWeeks = () => {
-    const startDate = new Date(2023, 4, 5); // Setting the start date (May 5, 2023)
     const targetDate = new Date(2024, 4, 5); // Date when Baby Midi is exactly 24 weeks old (May 5, 2024)
     const currentDate = new Date(); // Getting the current date
     const millisecondsPerWeek = 1000 * 60 * 60 * 24 * 7; // Number of milliseconds in a week
-    const weeksSinceStart = Math.floor((currentDate - startDate) / millisecondsPerWeek);
     const weeksAtTarget = 24;
     const weeksSinceTarget = Math.floor((currentDate - targetDate) / millisecondsPerWeek);
     const ageInWeeks = weeksAtTarget + weeksSinceTarget; // Calculating the age in weeks
